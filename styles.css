@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --bg-color: rgb(40, 40, 40);
+    --logo-color: rgb(39, 9, 79);
+    --disc-color: rgb(141, 112, 90);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+#logo {
+    margin-top: 10%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img {
+    height: 100%;
+    border-radius: 10%;
+}
+
+#buttons {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    border: 0;
+    width: 40vw;
+    height: clamp(5vh, 10vh, 15vh);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    display: inline;
+    box-shadow: 2px 2px white;
+    transition: box-shadow 400ms ease,  
+        transform 400ms ease;
+}
+
+.button:not(:last-child) {
+    margin-right: 2rem;
+}
+
+@media screen and (max-width: 500px){
+    #buttons {
+        flex-direction: column;   
+    }
+
+    .button {
+        margin: 0 0 0 0;
+    }
+
+    .button:not(:last-child) {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+#join-button {
+    background-color: var(--logo-color);
+}
+
+#discord-button {
+    background-color: var(--disc-color);
+}
+
+#join-button:hover {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+#discord-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
